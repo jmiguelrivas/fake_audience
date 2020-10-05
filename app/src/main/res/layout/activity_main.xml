@@ -1,154 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical"
-    android:gravity="">
+    android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btn_applauses"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:onClick="playApplauses"
-        android:text="@string/applauses"
-        android:textSize="14sp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:columnCount="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/crickets"
-        android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@+id/btn_applauses"
-        app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/btn_applauses"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:onClick="playApplauses"
+            android:text="@string/applauses" />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/boo"
-        android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@+id/button2"
-        app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:text="@string/crickets" />
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/aww"
-        android:textSize="14sp"
-        android:visibility="visible"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_applauses" />
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:text="@string/boo" />
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/rimshot"
-        android:textSize="14sp"
-        android:visibility="visible"
-        app:layout_constraintStart_toEndOf="@+id/button4"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:text="@string/aww" />
 
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/laughs"
-        android:textSize="14sp"
-        android:visibility="visible"
-        app:layout_constraintStart_toEndOf="@+id/button5"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:text="@string/rimshot" />
 
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/meow"
-        android:textSize="14sp"
-        android:visibility="visible"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:text="@string/laughs" />
 
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/burp"
-        android:textSize="14sp"
-        android:visibility="visible"
-        app:layout_constraintStart_toEndOf="@+id/button7"
-        app:layout_constraintTop_toBottomOf="@+id/button5" />
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:text="@string/meow" />
 
-    <Button
-        android:id="@+id/button9"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/fart"
-        android:textSize="14sp"
-        android:visibility="visible"
-        app:layout_constraintStart_toEndOf="@+id/button8"
-        app:layout_constraintTop_toBottomOf="@+id/button6" />
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:text="@string/burp" />
 
-    <Button
-        android:id="@+id/button10"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/drumroll"
-        android:textSize="14sp"
-        android:visibility="visible"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button7" />
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:text="@string/fart" />
 
-    <Button
-        android:id="@+id/button11"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/disappointment"
-        android:textSize="14sp"
-        android:visibility="visible"
-        app:layout_constraintStart_toEndOf="@+id/button10"
-        app:layout_constraintTop_toBottomOf="@+id/button8" />
+        <Button
+            android:id="@+id/button10"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:text="@string/drumroll" />
 
-    <Button
-        android:id="@+id/button12"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/evil_laught"
-        android:textSize="14sp"
-        android:visibility="visible"
-        app:layout_constraintStart_toEndOf="@+id/button11"
-        app:layout_constraintTop_toBottomOf="@+id/button9" />
+        <Button
+            android:id="@+id/button11"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:text="@string/disappointment" />
 
-</LinearLayout>
+        <Button
+            android:id="@+id/button12"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:text="@string/evil_laugh" />
+
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

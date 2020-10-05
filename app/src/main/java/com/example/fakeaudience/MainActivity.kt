@@ -12,8 +12,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         mp = MediaPlayer.create(this, R.raw.applauses)
-        mp.isLooping = false
-        mp.setVolume(1.0f, 1.0f)
     }
 
     fun playApplauses(v: View) {
