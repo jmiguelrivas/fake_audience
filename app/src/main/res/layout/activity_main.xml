@@ -1,98 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
 
-    <GridLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:columnCount="3"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/btn_applauses"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
-            android:onClick="playApplauses"
-            android:text="@string/applauses" />
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:columnCount="3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
-            android:text="@string/crickets" />
+            <com.example.fakeaudience.GridItem />
 
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
-            android:text="@string/boo" />
+            <com.example.fakeaudience.GridItem />
 
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
-            android:text="@string/aww" />
+            <com.example.fakeaudience.GridItem />
 
-        <Button
-            android:id="@+id/button5"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
-            android:text="@string/rimshot" />
+            <com.example.fakeaudience.GridItem />
 
-        <Button
-            android:id="@+id/button6"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
-            android:text="@string/laughs" />
+            <com.example.fakeaudience.GridItem />
 
-        <Button
-            android:id="@+id/button7"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
-            android:text="@string/meow" />
+            <com.example.fakeaudience.GridItem />
 
-        <Button
-            android:id="@+id/button8"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
-            android:text="@string/burp" />
+            <com.example.fakeaudience.GridItem />
 
-        <Button
-            android:id="@+id/button9"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
-            android:text="@string/fart" />
+            <com.example.fakeaudience.GridItem />
 
-        <Button
-            android:id="@+id/button10"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
-            android:text="@string/drumroll" />
+            <com.example.fakeaudience.GridItem />
 
-        <Button
-            android:id="@+id/button11"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
-            android:text="@string/disappointment" />
+            <com.example.fakeaudience.GridItem />
 
-        <Button
-            android:id="@+id/button12"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
-            android:text="@string/evil_laugh" />
+            <com.example.fakeaudience.GridItem />
 
-    </GridLayout>
+            <com.example.fakeaudience.GridItem />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <com.example.fakeaudience.GridItem />
+
+            <com.example.fakeaudience.GridItem />
+
+            <com.example.fakeaudience.GridItem />
+
+            <com.example.fakeaudience.GridItem />
+
+            <com.example.fakeaudience.GridItem />
+
+            <com.example.fakeaudience.GridItem />
+
+            <com.example.fakeaudience.GridItem />
+
+            <com.example.fakeaudience.GridItem />
+
+            <com.example.fakeaudience.GridItem />
+
+            <com.example.fakeaudience.GridItem />
+
+            <com.example.fakeaudience.GridItem />
+
+            <com.example.fakeaudience.GridItem />
+
+            <com.example.fakeaudience.GridItem />
+
+            <com.example.fakeaudience.GridItem />
+
+            <com.example.fakeaudience.GridItem />
+
+            <com.example.fakeaudience.GridItem />
+
+            <com.example.fakeaudience.GridItem />
+
+            <com.example.fakeaudience.GridItem />
+
+            <com.example.fakeaudience.GridItem />
+
+            <com.example.fakeaudience.GridItem />
+
+            <com.example.fakeaudience.GridItem />
+
+            <com.example.fakeaudience.GridItem />
+
+            <com.example.fakeaudience.GridItem />
+
+            <com.example.fakeaudience.GridItem />
+
+            <com.example.fakeaudience.GridItem />
+
+            <com.example.fakeaudience.GridItem />
+
+        </GridLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+

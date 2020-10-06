@@ -1,15 +1,3 @@
 <resources>
     <string name="app_name">Fake Audience</string>
-    <string name="applauses">Applauses</string>
-    <string name="crickets">Crickets</string>
-    <string name="boo">Boo</string>
-    <string name="aww">Aww!</string>
-    <string name="rimshot">Rimshot</string>
-    <string name="laughs">Laughs</string>
-    <string name="meow">Meow</string>
-    <string name="burp">Burp</string>
-    <string name="fart">Fart</string>
-    <string name="drumroll">Drumroll</string>
-    <string name="disappointment">Disappointment</string>
-    <string name="evil_laugh">Evil Laughter</string>
 </resources>
