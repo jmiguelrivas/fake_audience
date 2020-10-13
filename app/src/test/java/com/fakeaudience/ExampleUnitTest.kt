@@ -1,4 +1,4 @@
-package com.example.vicky.mycustomview
+package com.fakeaudience
 
 import org.junit.Test
 

@@ -1,4 +1,4 @@
-package com.example.vicky.mycustomview
+package com.fakeaudience
 
 import android.content.Context
 import android.util.AttributeSet
