@@ -41,16 +41,25 @@ class MyCustomView(context: Context, attrs: AttributeSet) : LinearLayout(context
         val view = inflater.inflate(R.layout.my_custom_view_layout, this, true)
         listview = view.findViewById(R.id.listview)
         selectedItems.addAll(Fxs)
-        refreshData(true)
+        refreshData()
     }
 
-    fun refreshData(clearData: Boolean) {
+    fun refreshData() {
         listview.adapter = MyCustomViewAdapter(context, R.layout.my_custom_view_item, selectedItems)
     }
 
-    private fun play(song: Int){
+    private fun play(item: Fx){
+        val song = item.audio
+        val isBackgroundNoise = item.backgroudNoise
+
         mp = MediaPlayer.create(context, song)
         mp?.start()
+
+        if(isBackgroundNoise) {
+            mp?.setLooping(true)
+        } else {
+            mp?.setLooping(false)
+        }
     }
 
     private fun stop() {
@@ -63,22 +72,16 @@ class MyCustomView(context: Context, attrs: AttributeSet) : LinearLayout(context
     private fun playSound(item:Fx, position:Int) {
         val isNotStarted = mp == null
         val isPlayingADifferentSong = position != currentSong && mp != null
-        val isBackgroundNoise = item.backgroudNoise
 
         if(isNotStarted){
-            play(item.audio)
+            play(item)
         } else if(isPlayingADifferentSong) {
             stop()
-            play(item.audio)
+            play(item)
         } else {
             stop()
         }
 
-        if(isBackgroundNoise) {
-            mp?.setLooping(true)
-        } else {
-            mp?.setLooping(false)
-        }
         currentSong = position
     }
 
