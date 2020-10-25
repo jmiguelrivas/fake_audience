@@ -14,10 +14,10 @@ class MyCustomView(context: Context, attrs: AttributeSet) : LinearLayout(context
     private val Fxs = listOf<Fx>(
         Fx("Angry Cat","\ue912", R.raw.angry_cat, false),
         Fx("Applause","\ue914", R.raw.applause, false),
-        Fx("Aww!","\ue913", R.raw.aww, false),
-        Fx("Boo","\ue915", R.raw.boo, false),
+        Fx("Aww! / Sad Crowd","\ue913", R.raw.aww, false),
+        Fx("Boo / Angry Crowd","\ue915", R.raw.boo, false),
         Fx("Burp","\ue904", R.raw.burp, false),
-        Fx("Crickets","\ue90a", R.raw.crickets, false),
+        Fx("Crickets / Awkward","\ue90a", R.raw.crickets, false),
         Fx("Drum Roll","\ue911", R.raw.drum_roll, false),
         Fx("Evil Laugh", "\ue903", R.raw.evil_laugh, false),
         Fx("Fart","\ue902", R.raw.fart, false),
