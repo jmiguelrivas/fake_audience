@@ -3,6 +3,7 @@ package com.fakeaudience
 import android.content.Context
 import android.media.MediaPlayer
 import android.util.AttributeSet
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -27,6 +28,8 @@ class MyCustomView(context: Context, attrs: AttributeSet) : LinearLayout(context
             Fx("Waves","\uf2b5", R.raw.applause),
             Fx("Nevada Dream","\uf2b5", R.raw.applause)
     )
+    private var mp: MediaPlayer? = null
+    private var currentSong: Int? = null
     private var listview: ListView
     private var selectedItems: MutableList<Fx> = ArrayList()
 
@@ -42,9 +45,32 @@ class MyCustomView(context: Context, attrs: AttributeSet) : LinearLayout(context
         listview.adapter = MyCustomViewAdapter(context, R.layout.my_custom_view_item, selectedItems)
     }
 
-    private fun playSound(position:Int) {
-        selectedItems.removeAt(position)
-        refreshData(false)
+    private fun play(song: Int){
+        mp = MediaPlayer.create(context, song)
+        mp?.start()
+    }
+
+    private fun stop() {
+        mp?.stop()
+        mp?.reset()
+        mp?.release()
+        mp = null
+    }
+
+    private fun playSound(item:Int, position:Int) {
+        val isNotStarted = mp == null
+        val isPlayingADifferentSong = position != currentSong && mp != null
+
+        if(isNotStarted){
+            play(item)
+        } else if(isPlayingADifferentSong) {
+            stop()
+            play(item)
+        }
+        else {
+            stop()
+        }
+        currentSong = position
     }
 
     inner class MyCustomViewAdapter(context: Context?, var resource: Int, var objects: MutableList<Fx>?) : ArrayAdapter<Fx>(context, resource, objects) {
@@ -61,7 +87,7 @@ class MyCustomView(context: Context, attrs: AttributeSet) : LinearLayout(context
             play_icon.text = objects!!.get(position).icon
             play_label.text = objects!!.get(position).title
             play_item.setOnClickListener {
-                playSound(position)
+                playSound(objects!!.get(position).audio, position)
             }
             return view
         }
