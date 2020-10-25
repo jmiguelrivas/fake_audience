@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CustomView.iml" filepath="$PROJECT_DIR$/.idea/modules/CustomView.iml" group="CustomView" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/CustomView-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/CustomView-app.iml" group="CustomView/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/FakeAudience.iml" filepath="$PROJECT_DIR$/.idea/modules/FakeAudience.iml" group="FakeAudience" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/FakeAudience-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/FakeAudience-app.iml" group="FakeAudience/app" />
       <module fileurl="file://$PROJECT_DIR$/MyCustomView.iml" filepath="$PROJECT_DIR$/MyCustomView.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>

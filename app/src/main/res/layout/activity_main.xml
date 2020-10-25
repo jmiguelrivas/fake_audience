@@ -12,14 +12,4 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true" />
 
-    <Button
-        android:id="@+id/submit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="@color/colorPrimary"
-        android:text="Submit"
-        android:textColor="@android:color/white" />
-
-
 </RelativeLayout>
