@@ -13,7 +13,7 @@
         android:layout_marginLeft="8dp"
         android:padding="5dp"
         android:textSize="18sp"
-        app:fontFamily="@font/fontawesome" />
+        app:fontFamily="@font/icomoon" />
 
     <TextView
         android:id="@+id/play_label"

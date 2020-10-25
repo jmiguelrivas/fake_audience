@@ -3,7 +3,6 @@ package com.fakeaudience
 import android.content.Context
 import android.media.MediaPlayer
 import android.util.AttributeSet
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,22 +10,26 @@ import android.widget.*
 
 class MyCustomView(context: Context, attrs: AttributeSet) : LinearLayout(context, attrs) {
 
-    data class Fx(var title: String, var icon:String, var audio:Int)
+    data class Fx(var title: String, var icon:String, var audio:Int, var backgroudNoise:Boolean)
     private val Fxs = listOf<Fx>(
-            Fx("Applause","\uf2b5", R.raw.applause),
-            Fx("Aww!","\uf2b5", R.raw.applause),
-            Fx("Boo","\uf2b5", R.raw.applause),
-            Fx("Burp","\uf2b5", R.raw.applause),
-            Fx("Crickets","\uf2b5", R.raw.applause),
-            Fx("Drumroll","\uf2b5", R.raw.applause),
-            Fx("Evil Laughter", "\uf2b5", R.raw.applause),
-            Fx("Fart","\uf2b5", R.raw.applause),
-            Fx("Laughs","\uf2b5", R.raw.applause),
-            Fx("Meow!","\uf2b5", R.raw.applause),
-            Fx("Rimshot","\uf2b5", R.raw.applause),
-            Fx("Thunderstorm","\uf2b5", R.raw.applause),
-            Fx("Waves","\uf2b5", R.raw.applause),
-            Fx("Nevada Dream","\uf2b5", R.raw.applause)
+        Fx("Angry Cat","\ue912", R.raw.angry_cat, false),
+        Fx("Applause","\ue914", R.raw.applause, false),
+        Fx("Aww!","\ue913", R.raw.aww, false),
+        Fx("Boo","\ue915", R.raw.boo, false),
+        Fx("Burp","\ue904", R.raw.burp, false),
+        Fx("Crickets","\ue90a", R.raw.crickets, false),
+        Fx("Drum Roll","\ue911", R.raw.drum_roll, false),
+        Fx("Evil Laugh", "\ue903", R.raw.evil_laugh, false),
+        Fx("Fart","\ue902", R.raw.fart, false),
+        Fx("Laughing Crowd","\ue90b", R.raw.laughing_crowd, false),
+        Fx("Rimshot","\ue900", R.raw.rimshot, false),
+        Fx("Birds", "\ue909", R.raw.birds, true),
+        Fx("Coffe Shop", "\ue910", R.raw.coffe_shop, true),
+        Fx("Rain", "\ue906", R.raw.rain, true),
+        Fx("Thunders","\ue907", R.raw.thunder, true),
+        Fx("Ocean Waves","\ue908", R.raw.ocean_waves, true),
+        Fx("Wind", "\ue916", R.raw.wind, true),
+        Fx("Nevada Dream","\ue905", R.raw.applause, false)
     )
     private var mp: MediaPlayer? = null
     private var currentSong: Int? = null
@@ -57,18 +60,24 @@ class MyCustomView(context: Context, attrs: AttributeSet) : LinearLayout(context
         mp = null
     }
 
-    private fun playSound(item:Int, position:Int) {
+    private fun playSound(item:Fx, position:Int) {
         val isNotStarted = mp == null
         val isPlayingADifferentSong = position != currentSong && mp != null
+        val isBackgroundNoise = item.backgroudNoise
 
         if(isNotStarted){
-            play(item)
+            play(item.audio)
         } else if(isPlayingADifferentSong) {
             stop()
-            play(item)
-        }
-        else {
+            play(item.audio)
+        } else {
             stop()
+        }
+
+        if(isBackgroundNoise) {
+            mp?.setLooping(true)
+        } else {
+            mp?.setLooping(false)
         }
         currentSong = position
     }
@@ -84,10 +93,12 @@ class MyCustomView(context: Context, attrs: AttributeSet) : LinearLayout(context
             val play_icon = view.findViewById<TextView>(R.id.play_icon)
             val play_label = view.findViewById<TextView>(R.id.play_label)
             val play_item = view.findViewById<LinearLayout>(R.id.play_item)
+
             play_icon.text = objects!!.get(position).icon
             play_label.text = objects!!.get(position).title
+
             play_item.setOnClickListener {
-                playSound(objects!!.get(position).audio, position)
+                playSound(objects!!.get(position), position)
             }
             return view
         }
