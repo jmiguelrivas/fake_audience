@@ -13,23 +13,16 @@ class MyCustomView(context: Context, attrs: AttributeSet) : LinearLayout(context
     data class Fx(var title: String, var icon:String, var audio:Int, var backgroudNoise:Boolean)
     private val Fxs = listOf<Fx>(
         Fx("Angry Cat","\ue912", R.raw.angry_cat, false),
+        Fx("Angry Crowd","\ue915", R.raw.boo, false),
         Fx("Applause","\ue914", R.raw.applause, false),
-        Fx("Aww! / Sad Crowd","\ue913", R.raw.aww, false),
-        Fx("Boo / Angry Crowd","\ue915", R.raw.boo, false),
         Fx("Burp","\ue904", R.raw.burp, false),
-        Fx("Crickets / Awkward","\ue90a", R.raw.crickets, false),
+        Fx("Crickets","\ue90a", R.raw.crickets, false),
         Fx("Drum Roll","\ue911", R.raw.drum_roll, false),
         Fx("Evil Laugh", "\ue903", R.raw.evil_laugh, false),
         Fx("Fart","\ue902", R.raw.fart, false),
         Fx("Laughing Crowd","\ue90b", R.raw.laughing_crowd, false),
         Fx("Rimshot","\ue900", R.raw.rimshot, false),
-        Fx("Birds", "\ue909", R.raw.birds, true),
-        Fx("Coffe Shop", "\ue910", R.raw.coffe_shop, true),
-        Fx("Rain", "\ue906", R.raw.rain, true),
-        Fx("Thunders","\ue907", R.raw.thunder, true),
-        Fx("Ocean Waves","\ue908", R.raw.ocean_waves, true),
-        Fx("Wind", "\ue916", R.raw.wind, true),
-        Fx("Nevada Dream","\ue905", R.raw.applause, false)
+        Fx("Sad Crowd","\ue913", R.raw.aww, false)
     )
     private var mp: MediaPlayer? = null
     private var currentSong: Int? = null

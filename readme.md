@@ -2,21 +2,27 @@
 -- ___Miguel Rivas, such a poet___
 
 # Sounds
-- Applauses
-- Crickets
-- Boo
-- Aww! (Disappointment)
-- Rimshot
-- Laughs
-- Meow!
-- Burp
-- Fart
-- Drumroll
-- Evil Laughter
+- Angry Cat: One Hour SoundTube
+- Burp: nathanolson
+- Crickets: Viral Vidz NL
+- Drum Roll: Gaming Sound FX
+- Rimshot: SoundEffectsFactory
+- Evil Laugh: Sound Effects
+- Boo: Visual & Sound FX
+- Aww!: All-in-One Channel
+- Applause: Sound Effect
+- Fart: Sound Effect
+- Laughing Crowd: Sound Effects
 
-# White Noises
-- Thunder
-- Fireplace
-- Waves
-- Rain
-- Nevada Dream
+# Icons
+- Cat Icon: Antonis Makriyannis
+- Angry Person: Alice Design
+- Claps: Adrien Coquet
+- Carbonated Water: Mila Redko
+- Cricket: Grégory Montigny
+- Drum: Paisley
+- Devil: Adrien Coquet
+- Fart: Andrejs Kirma
+- Happy Person: AomAm
+- Cymbal: Yo! Baba
+- Sad Person: Alice Design
